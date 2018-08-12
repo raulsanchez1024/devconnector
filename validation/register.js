@@ -33,7 +33,7 @@ module.exports = function validateRegisterInput(data) {
     errors.password = "Password field must be at least 6 characters";
   }
 
-  if (Validator.isEmail(data.password2)) {
+  if (Validator.isEmpty(data.password2)) {
     errors.password2 = "Confirm password field is required";
   }
 
