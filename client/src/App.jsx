@@ -17,6 +17,7 @@ import Register from "./components/auth/Register.jsx";
 import Login from "./components/auth/Login.jsx";
 import Dashboard from "./components/dashboard/Dashboard.jsx";
 import CreateProfile from "./components/create-profile/CreateProfile.jsx";
+import EditProfile from "./components/edit-profile/EditProfile.jsx";
 
 import "./App.css";
 
@@ -57,6 +58,9 @@ class App extends Component {
               </Switch>
               <Switch>
                 <PrivateRoute path="/create-profile" exact component={CreateProfile} />
+              </Switch>
+              <Switch>
+                <PrivateRoute path="/edit-profile" exact component={EditProfile} />
               </Switch>
             </div>
             <Footer />
