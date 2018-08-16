@@ -20,6 +20,7 @@ import CreateProfile from "./components/create-profile/CreateProfile.jsx";
 import EditProfile from "./components/edit-profile/EditProfile.jsx";
 import AddExperience from "./components/add-credentials/AddExperience.jsx";
 import AddEducation from "./components/add-credentials/AddEducation.jsx";
+import Profiles from "./components/profiles/Profiles.jsx";
 
 import "./App.css";
 
@@ -55,6 +56,7 @@ class App extends Component {
             <div className="container">
               <Route path="/register" exact component={Register} />
               <Route path="/login" exact component={Login} />
+              <Route path="/profiles" exact component={Profiles} />
               <Switch>
                 <PrivateRoute path="/dashboard" exact component={Dashboard} />
               </Switch>
