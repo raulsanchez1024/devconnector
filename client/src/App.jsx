@@ -22,7 +22,8 @@ import AddExperience from "./components/add-credentials/AddExperience.jsx";
 import AddEducation from "./components/add-credentials/AddEducation.jsx";
 import Profiles from "./components/profiles/Profiles.jsx";
 import Profile from "./components/profile/Profile.jsx";
-import NotFound from './components/not-found/NotFound.jsx';
+import NotFound from "./components/not-found/NotFound.jsx";
+import Posts from "./components/posts/Posts.jsx";
 
 import "./App.css";
 
@@ -90,6 +91,9 @@ class App extends Component {
                   exact
                   component={AddEducation}
                 />
+              </Switch>
+              <Switch>
+                <PrivateRoute path="/feed" exact component={Posts} />
               </Switch>
               <Route path="/not-found" exact component={NotFound} />
             </div>
