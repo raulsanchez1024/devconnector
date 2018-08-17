@@ -21,6 +21,8 @@ import EditProfile from "./components/edit-profile/EditProfile.jsx";
 import AddExperience from "./components/add-credentials/AddExperience.jsx";
 import AddEducation from "./components/add-credentials/AddEducation.jsx";
 import Profiles from "./components/profiles/Profiles.jsx";
+import Profile from "./components/profile/Profile.jsx";
+import NotFound from './components/not-found/NotFound.jsx';
 
 import "./App.css";
 
@@ -57,6 +59,7 @@ class App extends Component {
               <Route path="/register" exact component={Register} />
               <Route path="/login" exact component={Login} />
               <Route path="/profiles" exact component={Profiles} />
+              <Route path="/profile/:handle" exact component={Profile} />
               <Switch>
                 <PrivateRoute path="/dashboard" exact component={Dashboard} />
               </Switch>
@@ -88,6 +91,7 @@ class App extends Component {
                   component={AddEducation}
                 />
               </Switch>
+              <Route path="/not-found" exact component={NotFound} />
             </div>
             <Footer />
           </div>
